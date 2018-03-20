@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <style type="text/css" media="screen">
+    	.container {
+        margin-top: 70px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item" ><a class="page-link" href="#" >1</a></li>
+            <li class="page-item active" ><a class="page-link" href="#" >2</a></li>
+            <li class="page-item" ><a class="page-link" href="#" >3</a></li>
+            <li class="page-item" ><a class="page-link" href="#" >4</a></li>
+            <li class="page-item" ><a class="page-link" href="#" >5</a></li>
+            <li class="page-item" ><a class="page-link" href="#" >6</a></li>
+            <li class="page-item" ><a class="page-link" href="#" >7</a></li>
+            <li class="page-item" ><a class="page-link" href="#" >8</a></li>
+            <li class="page-item" ><a class="page-link" href="#" >9</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
+    <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script src="../bootstrap/js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script>
+    	
+		$(".page-item").click(function() {
+			var old = parseInt($(".active .page-link").text());
+			var begin_end = $('a', this).text();
+			var prev = $(".page-item:first .page-link").text();
+			var next = $(".page-item:last .page-link").text();
+			console.log(begin_end);
+			
+			$(".page-item").removeClass('active');
+			$(this).addClass('active');
+
+			var now = parseInt($(".active .page-link").text());
+			if(now === 1){
+				$(".page-item").removeClass("disabled");
+				$(this).prev().addClass('disabled', true);
+			} else if(now === $(".page-item").length - 2) {
+				$(".page-item").removeClass("disabled");
+				$(this).next().addClass('disabled', true);
+			} else if(begin_end === prev) {
+
+				console.log(prev);
+			} else if(begin_end === next) {
+				console.log(next);
+			} else {
+				
+				$(".page-item").removeClass("disabled");
+			} 
+
+
+		});
+
+
+    </script>
+</body>
+
+</html>
