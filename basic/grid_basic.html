@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grid Basic</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+    <style type="text/css" media="screen">
+/*    	.col{
+    		border: 1px solid #fff;
+    		background-color: #FD5B03;
+    		height: 50px;
+    	}*/
+
+    	.row > div {
+    		border: 1px solid #fff;
+    		background-color: #FD5B03;
+    		height: 50px;
+    	}
+    	
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><code>.col-</code> : 576px</li>
+        <li><code>.col-sm-</code>: > 576px</li>
+        <li><code>.col-md-</code>: > 768px</li>
+        <li><code>.col-lg-</code>: > 992px</li>
+        <li><code>.col-xl-</code>: > 1200px</li>
+    </ul>
+
+    <div class="container">
+    	<div class="row">
+    		<p><i>Second example: instead of adding a number to each col, let bootstrap handle the layout, to create equal width columns: two "col" elements = 50% width to each col. three cols = 33.33% width to each col. four cols = 25% width, etc. You can also use .col-sm|md|lg|xl to make the columns responsive.</i></p>
+    		<div class="col">.col</div>
+    		<div class="col">.col</div>
+    		<div class="col">.col</div>
+    		<div class="col">.col</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-sm-3 col-md-6 col-lg-2 col-xl-3">col-sm-3 col-md-6 col-lg-2 col-xl-3</div>
+    		<div class="col-sm-3 col-md-1 col-lg-3 col-xl-4">col-sm-3 col-md-1 col-lg-3 col-xl-4</div>
+    		<div class="col-sm-3 col-md-1 col-lg-2 col-xl-3">col-sm-3 col-md-1 col-lg-2 col-xl-3</div>
+    		<div class="col-sm-3 col-md-4 col-lg-5 col-xl-2">col-sm-3 col-md-4 col-lg-5 col-xl-2</div>
+    	</div>
+    </div>
+    <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script src="../bootstrap/js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
